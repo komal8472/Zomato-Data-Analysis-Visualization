@@ -1,63 +1,130 @@
-# Zomato-Data-Analysis-Visualization
+# Zomato-Data-Analysis-Visualization 
 
 ## Project Overview
-This project focuses on cleaning, analyzing, and predicting restaurant ratings using the Zomato dataset. The dataset contains information about restaurants such as ratings, votes, cost, online ordering, table booking, cuisines, and locations.
 
-The project includes:
-- Data Cleaning & Preprocessing
-- Exploratory Data Analysis (EDA)
-- Feature Encoding
-- Correlation Analysis
-- Restaurant Rating Prediction using Machine Learning
+This project focuses on cleaning, preprocessing, analyzing, and predicting restaurant ratings using the Zomato restaurant dataset. The dataset contains restaurant information such as ratings, votes, costs, online ordering, table booking availability, restaurant type, cuisines, and locations.
+
+The project combines Exploratory Data Analysis (EDA) with Machine Learning techniques to discover insights and predict restaurant ratings.
+
+---
 
 ## Technologies Used
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- Scikit-Learn
 
-## Dataset Features
-- Restaurant Name
-- Online Order Availability
-- Table Booking Availability
-- Votes
-- Rating
-- Cost for Two
-- Restaurant Type
-- Location
-- Cuisine
-- City
+* Python
+* Pandas
+* NumPy
+* Matplotlib
+* Seaborn
+* Scikit-Learn
+* Pickle
+
+---
 
 ## Data Preprocessing
-- Removed unnecessary columns (`url`, `phone`, `dish_liked`)
-- Removed duplicate records
-- Handled missing values
-- Cleaned rating values
-- Converted cost column into numeric format
-- Encoded categorical variables
 
-## Exploratory Data Analysis
-- Correlation Heatmap
-- Restaurant Rating Analysis
-- Cost vs Rating Analysis
-- Feature Relationship Analysis
+The following preprocessing steps were performed:
 
-## Machine Learning Model
-### Regression Analysis
-The dataset was split into training and testing sets and a regression model was applied to predict restaurant ratings.
+* Removed unnecessary columns (`url`, `phone`, `dish_liked`)
+* Removed duplicate records
+* Handled missing values
+* Renamed columns for better readability
+* Converted cost values into numeric format
+* Cleaned rating values by removing `/5`
+* Converted categorical variables using factorization encoding
+* Prepared data for machine learning models
+
+---
+
+## Exploratory Data Analysis (EDA)
+
+Several visualizations were created to understand restaurant trends:
+
+* Online Order Analysis
+* Table Booking Analysis
+* Table Booking vs Rating
+* City-wise Restaurant Distribution
+* City-wise Rating Analysis
+* Restaurant Type Distribution
+* Restaurant Type vs Rating
+* Service Type Analysis
+* Service Type vs Rating
+* Cost Distribution Analysis
+* Location-wise Restaurant Count
+* Most Famous Restaurant Chains
+
+---
+
+## Correlation Analysis
+
+A Kendall Correlation Heatmap was generated to identify relationships between different restaurant features and ratings.
+
+---
+
+## Machine Learning Models
+
+The dataset was split into training and testing sets and multiple regression models were trained:
+
+### 1. Linear Regression
+
+Used as a baseline model for rating prediction.
+
+### 2. Random Forest Regressor
+
+Implemented with 500 estimators to improve prediction performance.
+
+### 3. Extra Trees Regressor
+
+Used for enhanced prediction accuracy and final model generation.
+
+---
+
+## Model Deployment Preparation
+
+The final trained model was saved using Pickle:
+
+```python
+pickle.dump(ETree, open('model.pkl', 'wb'))
+```
+
+This allows the model to be reused for future prediction applications.
+
+---
 
 ## Project Workflow
-1. Load Dataset
+
+1. Data Collection
 2. Data Cleaning
-3. Feature Engineering
-4. Data Encoding
+3. Data Transformation
+4. Feature Encoding
 5. Exploratory Data Analysis
 6. Correlation Analysis
-7. Model Training
-8. Model Evaluation
+7. Train-Test Split
+8. Model Training
+9. Model Evaluation
+10. Model Saving
+
+---
+
+## Key Insights
+
+* Online ordering significantly influences restaurant engagement.
+* Table booking availability impacts restaurant ratings.
+* Restaurant type and location play an important role in customer ratings.
+* Popular restaurant chains dominate the market across multiple locations.
+* Cost and customer votes show relationships with restaurant ratings.
+
+---
 
 ## Results
-The project successfully cleaned and transformed the dataset and built a machine learning model to predict restaurant ratings based on restaurant features.
 
+Successfully cleaned and transformed the Zomato dataset, performed detailed exploratory analysis, trained multiple machine learning models, and developed a restaurant rating prediction system.
+
+---
+
+## Author
+
+**Komal Changdev Gaikwad**
+
+B.Sc. Data Science
+
+Python | Machine Learning | Data Analysis | Data Visualization
