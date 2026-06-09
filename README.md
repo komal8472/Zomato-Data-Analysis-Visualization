@@ -125,6 +125,3 @@ Successfully cleaned and transformed the Zomato dataset, performed detailed expl
 
 **Komal Changdev Gaikwad**
 
-B.Sc. Data Science
-
-Python | Machine Learning | Data Analysis | Data Visualization
